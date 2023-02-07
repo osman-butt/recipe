@@ -1,0 +1,36 @@
+header {
+  text-align: center;
+}
+
+.main {
+  background-color: rgb(200, 200, 200);
+}
+
+.grid {
+  margin: 150px;
+  background-color: rgb(245, 245, 245);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  padding: 1em;
+  border: solid;
+}
+
+.description {
+  grid-template-columns: 1fr 1fr;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.dish-header {
+  text-align: center;
+}
+
+.dish-image {
+  position: relative;
+}
+
+img {
+  width: 50%;
+  float: right;
+}
