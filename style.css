@@ -1,0 +1,270 @@
+header {
+  text-align: center;
+  padding: 2em;
+  font-weight: bold;
+}
+
+@media print {
+  .noprint,
+  #print-btn {
+    display: none;
+  }
+}
+
+#print-btn {
+  background-color: #f9f9f9;
+  justify-self: center;
+  align-self: center;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+#print-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: green;
+  color: white;
+}
+
+#print-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 1em;
+}
+
+footer {
+  background-color: #384241;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+  color: white;
+  font-weight: bold;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+}
+
+p {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+#clock {
+  width: 18px;
+  opacity: 0.8;
+  float: left;
+}
+
+#persons {
+  width: 20px;
+  opacity: 0.8;
+  float: left;
+  padding-top: 1px;
+}
+
+#time-to-cook,
+#no-persons {
+  padding-left: 6px;
+}
+
+@media (max-width: 800px) {
+  #content-container {
+    display: grid;
+    grid-template-columns: auto;
+
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    /* padding-bottom: 10px; */
+  }
+  #recipe-resume-container,
+  #recipe-img,
+  #recipe-ingredients,
+  #recipe-method {
+    justify-self: center;
+  }
+
+  #dish-pic {
+    width: 96vw;
+    object-fit: cover;
+  }
+
+  #recipe-img {
+    order: -1;
+  }
+
+  .sugestion-grid {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (min-width: 800px) {
+  #content-container {
+    display: grid;
+    grid-template-columns: auto minmax(500px, 1fr);
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    /* padding-bottom: 10px; */
+  }
+
+  #dish-pic {
+    /* max-width: 900px; */
+    min-width: 300px;
+    width: 60vw;
+    object-fit: cover;
+  }
+
+  .sugestion-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1500px) {
+  #content-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    /* padding-bottom: 10px; */
+  }
+
+  #recipe-img {
+    /* background-image: "https://images.arla.com/recordid/52C482AC-DA5E-4B49-ACFBBAB2390113B6/butter-chicken.jpg?width=3000&height=2021&mode=crop&crop=(0,78,0,-616)"; */
+    object-fit: cover;
+    max-height: 600px;
+    width: 100%;
+  }
+
+  #dish-pic {
+    /* max-width: 900px; */
+    min-width: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .sugestion-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+#recipe-resume-container,
+#recipe-img,
+#recipe-ingredients,
+#recipe-method {
+  /* border-style: solid; */
+  align-items: center;
+  padding: 2em;
+}
+
+#recipe-img {
+  padding: 0;
+}
+
+#recipe-resume-container,
+#recipe-method {
+  background-color: #f9f9f9;
+}
+
+#recipe-resume-container,
+#recipe-ingredients {
+  max-width: 500px;
+  min-width: 300px;
+}
+
+#recipe-steps,
+#recipe-nutrition {
+  max-width: 600px;
+}
+
+.recipe-name {
+  text-align: center;
+}
+
+#recipe-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+#recipe-ingredients > ul {
+  list-style-type: none;
+}
+
+h3 {
+  text-align: center;
+}
+
+#recipe-nutrition {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+#nutrition-pr {
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.recipe-table {
+  text-size-adjust: 10px;
+}
+
+tbody {
+  font-size: 14px;
+  text-align: left;
+}
+
+.right-col {
+  text-align: right;
+}
+
+.ingredients-table {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  padding: 1em 0 1em 1.5em;
+}
+
+.btn-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 150px;
+}
+
+.tilberedningstid,
+.antal {
+  justify-self: center;
+  align-self: center;
+}
+
+#recipe-img {
+  align-items: stretch;
+  object-fit: contain;
+  min-width: 100%;
+}
+
+#dish-pic {
+  height: 100%;
+  width: 100%;
+}
