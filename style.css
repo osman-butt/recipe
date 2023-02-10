@@ -1,7 +1,76 @@
+@font-face {
+  font-family: headerfont;
+  src: url(font/recipe_font1.ttf);
+}
+
 header {
   text-align: center;
-  padding: 2em;
   font-weight: bold;
+  font-family: headerfont;
+  font-style: italic;
+}
+
+header > a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 42px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+.review {
+  display: grid;
+  grid-template-columns: 1fr;
+  cursor: pointer;
+}
+
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -999px;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+h5,
+.user-review,
+.container-review-btn {
+  justify-self: center;
+  align-self: center;
+}
+
+h5 {
+  margin-bottom: 1em;
+}
+
+.container-review-btn {
+  margin: 1em;
 }
 
 @media print {
@@ -11,18 +80,26 @@ header {
   }
 }
 
-#print-btn {
-  background-color: #f9f9f9;
+.checked {
+  color: orange;
+}
+
+#print-btn,
+.review-btn {
+  background-color: #384241;
+  color: white;
   justify-self: center;
   align-self: center;
   padding: 0.5em;
   border-radius: 0.5em;
+  font-family: "DM Sans";
+  font-size: 14px;
 }
 
-#print-btn:hover {
+#print-btn:hover,
+.review-btn:hover {
   cursor: pointer;
   opacity: 0.8;
-  background-color: green;
   color: white;
 }
 
@@ -48,10 +125,6 @@ body {
 
 p {
   font-size: 14px;
-}
-
-h1 {
-  font-size: 28px;
 }
 
 #clock {
@@ -123,7 +196,7 @@ h1 {
 
   .sugestion-grid {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     align-items: center;
     text-align: center;
   }
@@ -195,7 +268,7 @@ h1 {
 
 #recipe-stats {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 10px;
   font-size: 14px;
   opacity: 0.8;
@@ -253,7 +326,8 @@ tbody {
 }
 
 .tilberedningstid,
-.antal {
+.antal,
+.review-stars {
   justify-self: center;
   align-self: center;
 }
@@ -267,4 +341,10 @@ tbody {
 #dish-pic {
   height: 100%;
   width: 100%;
+}
+
+#hashtag {
+  opacity: 0.8;
+  width: 17px;
+  float: left;
 }
